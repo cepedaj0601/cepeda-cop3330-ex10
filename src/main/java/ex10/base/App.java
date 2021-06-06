@@ -38,6 +38,33 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        
+
+        double tax = 0.055;
+
+        System.out.println("Enter the price of item 1:");
+        int costitem1 = in.nextInt();
+
+        System.out.println("Enter the quantity of item 1:");
+        int numItem1 = in.nextInt();
+
+        System.out.println("Enter the price of item 2:");
+        int costitem2 = in.nextInt();
+
+        System.out.println("Enter the quantity of item 2:");
+        int numItem2 = in.nextInt();
+
+        System.out.println("Enter the price of item 3:");
+        int costitem3 = in.nextInt();
+
+        System.out.println("Enter the quantity of item 3:");
+        int numItem3 = in.nextInt();
+
+        double total = ((costitem1 * numItem1) + (costitem2 * numItem2) + (costitem3 * numItem3));
+
+        System.out.printf("\nSubtotal: $%.2f", total);
+
+        System.out.printf("\nTax: $%.2f", (total * tax));
+
+        System.out.printf("\nTotal: $%.2f", ((total * tax) + total));
     }
 }
